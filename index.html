@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10 Bulan, Satu Langit yang Sama — Untuk Cintaku</title>
+    <meta
+      name="description"
+      content="Rayakan 10 bulan perjalanan cinta kami — dari pertemuan pertama, jarak yang tak pernah benar-benar memisahkan, sampai perjuangan skripsi menuju wisuda. Sebuah surat cinta digital untuk Cintaku."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Ambient background: night sky look — same sky for two different cities -->
+    <div class="bg-scene" aria-hidden="true">
+      <div class="bg-glow"></div>
+      <div class="bg-vignette"></div>
+      <div class="stars" id="starField"></div>
+      <div class="embers">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Journey indicator -->
+    <nav class="journey" aria-hidden="true">
+      <span class="journey-dot" data-step="welcome"></span>
+      <span class="journey-dot" data-step="awal"></span>
+      <span class="journey-dot" data-step="ldr"></span>
+      <span class="journey-dot" data-step="skripsi"></span>
+      <span class="journey-dot" data-step="galeri"></span>
+      <span class="journey-dot" data-step="surat"></span>
+      <span class="journey-dot" data-step="penutup"></span>
+    </nav>
+
+    <button
+      id="muteBtn"
+      class="icon-btn"
+      type="button"
+      aria-label="Nyalakan atau matikan musik"
+    >
+      <span aria-hidden="true">&#9834;</span>
+    </button>
+
+    <main>
+      <!-- Loading -->
+      <section id="loading" class="page active" aria-live="polite">
+        <div class="seal-loader" aria-hidden="true"><span>&#9825;</span></div>
+        <h1 class="script">Menyusun Setiap Kenangan</h1>
+        <p class="eyebrow">
+          Memutar waktu ke 10 bulan yang lalu, ke 05 Oktober 2025…
+        </p>
+      </section>
+
+      <!-- Welcome -->
+      <section id="welcome" class="page">
+        <article class="paper">
+          <p class="eyebrow">Untuk kamu, Cintaku</p>
+          <h1 class="script">Selamat Datang di Cerita Kita</h1>
+          <p>
+            Sebelum kamu lanjut, tarik napas dulu ya, pelan-pelan saja. Ini
+            bukan sekadar halaman biasa — ini kumpulan rasa yang aku rapikan
+            jadi satu, supaya kamu tahu betapa berartinya 10 bulan ini bagiku,
+            terhitung sejak 05 Oktober 2025.
+          </p>
+
+          <div class="stat-row" id="statRow">
+            <div class="stat-chip">
+              <span class="stat-number" id="statTotal">10</span>
+              <span class="stat-label">Bulan Bersama</span>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Bulan Dekat</span>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-number">8</span>
+              <span class="stat-label">Bulan LDR</span>
+            </div>
+          </div>
+
+          <button class="btn" data-next="awal">Mulai Perjalanan</button>
+        </article>
+      </section>
+
+      <!-- Awal bertemu & 2 bulan dekat -->
+      <section id="awal" class="page">
+        <article class="paper">
+          <p class="eyebrow">Bab Satu — Awal Mula</p>
+          <h2>Waktu Kita Masih Bisa Bertemu Setiap Hari</h2>
+          <p>
+            Semua berawal dari pertemuan yang sederhana, tanggal 05 oktober
+            2025. Tidak ada kembang api, tidak ada momen dramatis — hanya dua
+            orang yang perlahan jadi nyaman satu sama lain. Dua bulan pertama
+            itu isinya sederhana: jalan bareng, ngobrol sampai lupa waktu, dan
+            hal-hal kecil yang ternyata paling aku rindukan sekarang.
+          </p>
+          <p>
+            Waktu itu aku belum tahu, bahwa dua bulan yang manis itu sedang
+            menyiapkan aku untuk sembilan bulan yang jauh lebih berat — tapi
+            juga jauh lebih membuktikan bahwa rasa ini nggak main-main.
+          </p>
+          <div class="mini-gallery" aria-hidden="true">
+            <img src="assets/img/foto-01.jpeg" alt="" loading="lazy" />
+            <img src="assets/img/foto-02.jpg" alt="" loading="lazy" />
+          </div>
+          <button class="btn" data-next="ldr">Lanjutkan ke Bab Dua</button>
+        </article>
+      </section>
+
+      <!-- LDR journey -->
+      <section id="ldr" class="page">
+        <article class="paper wide">
+          <p class="eyebrow">Bab Dua — Sembilan Bulan Jarak</p>
+          <h2>Jarak yang Tidak Pernah Benar-Benar Memisahkan</h2>
+          <p>
+            Sejak itu, kita cuma bisa saling menyapa lewat panggilan video dan
+            pesan yang kadang terlambat dibalas karena sinyal atau karena
+            ketiduran duluan. Tapi entah kenapa, tiap malam rasanya kita masih
+            menatap langit yang sama, memikirkan orang yang sama.
+          </p>
+
+          <div class="ldr-map" aria-hidden="true">
+            <div class="ldr-city ldr-city--start">
+              <span class="ldr-dot"></span>
+              <span class="ldr-city-label">Aku</span>
+            </div>
+            <svg
+              class="ldr-path"
+              viewBox="0 0 300 60"
+              preserveAspectRatio="none"
+            >
+              <path d="M10,50 Q150,-10 290,50" />
+            </svg>
+            <span class="ldr-plane">&#9992;</span>
+            <div class="ldr-city ldr-city--end">
+              <span class="ldr-dot"></span>
+              <span class="ldr-city-label">Kamu</span>
+            </div>
+          </div>
+
+          <div class="timeline" id="ldrTimeline">
+            <!-- diisi otomatis oleh b.js dari array ldrMonths -->
+          </div>
+
+          <button class="btn" data-next="skripsi">Lanjutkan ke Bab Tiga</button>
+        </article>
+      </section>
+
+      <!-- Skripsi & wisuda -->
+      <section id="skripsi" class="page">
+        <article class="paper wide">
+          <p class="eyebrow">Bab Tiga — Menuju Toga</p>
+          <h2>Aku Menulis Skripsi, Kamu yang Terus Menyemangati</h2>
+          <p>
+            Di tengah jarak yang sudah cukup melelahkan, aku masih harus
+            berjuang dengan revisi, bimbingan dosen, dan tenggat waktu yang
+            rasanya tidak ada habisnya. Kamu tidak selalu bisa hadir secara
+            fisik, tapi kamu selalu ada di setiap keluh kesahku, setiap kali aku
+            bilang "capek" jam 2 pagi, dan setiap kali aku akhirnya tersenyum
+            karena satu revisi selesai.
+          </p>
+
+          <div class="milestones" id="skripsiMilestones">
+            <!-- diisi otomatis oleh b.js dari array skripsiSteps -->
+          </div>
+
+          <p>
+            Dan akhirnya — sampai juga di titik ini. Terima kasih sudah jadi
+            tempatku pulang cerita, sudah menemani dari jauh tanpa pernah
+            membuatku merasa sendirian, sampai nanti tiba hari wisudaku.
+          </p>
+          <button class="btn" data-next="galeri">Lihat Kenangan Kita</button>
+        </article>
+      </section>
+
+      <!-- Galeri foto & video -->
+      <section id="galeri" class="page">
+        <article class="paper wide">
+          <p class="eyebrow">Kenangan yang Tersimpan</p>
+          <h2>Sebagian Kecil dari Banyak Momen Kita</h2>
+          <p>
+            Ini baru sebagian. Nanti akan terus bertambah setiap kali ada momen
+            baru yang layak disimpan.
+          </p>
+
+          <div class="gallery-grid" id="galleryGrid"></div>
+
+          <button class="btn" data-next="surat">Baca Suratnya</button>
+        </article>
+      </section>
+      <div id="lightbox" class="lightbox" hidden>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Tutup">
+          &times;
+        </button>
+        <div class="lightbox-content" id="lightboxContent"></div>
+      </div>
+
+      <!-- Letter -->
+      <section id="surat" class="page">
+        <article class="paper letter">
+          <div class="wax-seal" aria-hidden="true">&#9993;</div>
+          <h2>Sebuah Surat Kecil</h2>
+          <p id="typingText" aria-live="polite"></p>
+          <button class="btn" id="skipTyping" type="button">
+            Lewati Animasi
+          </button>
+        </article>
+      </section>
+
+      <!-- Ending -->
+      <section id="penutup" class="page">
+        <article class="paper">
+          <p class="eyebrow">Penutup — Untuk Sekarang</p>
+          <div class="anniv-badge" aria-hidden="true">
+            <span class="anniv-number">10</span>
+            <span class="anniv-word">Bulan</span>
+          </div>
+          <h1 class="script">Selamat 10 Bulan, Cintaku</h1>
+          <p>
+            Dari pertemuan pertama di 05 Oktober 2025, dua bulan yang dekat,
+            sembilan bulan yang jauh, sampai perjuangan skripsiku — makasih
+            sudah menjalani semuanya bersama aku. Ini bukan akhir cerita, cuma
+            penutup untuk bab yang sudah kita lewati, sebelum kita mulai bab
+            ke-12 dan seterusnya.
+          </p>
+          <p class="script signature">
+            — Selalu menatap langit yang sama denganmu, hari ini dan nanti
+          </p>
+          <button class="btn btn-ghost" id="restart">Ulangi Perjalanan</button>
+        </article>
+      </section>
+    </main>
+
+    <script src="b.js"></script>
+  </body>
+</html>
